@@ -1,21 +1,26 @@
 from django.shortcuts import render
 import json
 from django.http import HttpResponse
-from django.core import serializers
 from models import Menu
-from django.contrib.auth.models import User
-from django import *
-from django.http import *
-from django.db import *
-import sys
-reload(sys)
-sys.setdefaultencoding("utf-8")
-import datetime
+
 
 
 def home(resquest):
 
     json_data = open('/home/quan/Proyecto/restaurante/static/menu.json')
     data1 = json.load(json_data)
-#    data2 = json.dumps(json_data)
+    json_data.close()
+    for a in data1[0]['postre']:
+        T_Menu = Menu(tipo = 'postre', plato = a)
+        print a
+        T_Menu.save()
+    for b in data1[0]['entrante']:
+        T_Menu = Menu(tipo = 'entrante', plato = b)
+        print b
+#        T_Menu.save()
+    for c in data1[0]['carne']: 
+        T_Menu = Menu(tipo = 'carne', plato = c)
+        print c
+#        T_Menu.save()
+    
     return HttpResponse(data1)
