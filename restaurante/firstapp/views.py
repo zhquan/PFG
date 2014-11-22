@@ -22,7 +22,7 @@ def home(resquest):
         T_Menu = Menu(tipo = 'carne', plato = c)
         T_Menu.save()
     
-    return HttpResponse("<a href=localhost:8800/index.html>lista menu</a>")
+    return HttpResponse("<a href=http://localhost:8800/index.html>lista menu</a>")
 
 def menu(resquest):
     try:
@@ -32,12 +32,14 @@ def menu(resquest):
         while a < len(T_Postre):
             postre.append(T_Postre[a].plato)
             a = a +1
+
         T_Entrante = Menu.objects.filter(tipo = "entrante")
         entrante = []
         a = 0
         while a < len(T_Entrante):
             entrante.append(T_Entrante[a].plato)
             a = a+1
+
         T_Carne = Menu.objects.filter(tipo = "carne")
         carne = []
         a = 0
@@ -48,4 +50,4 @@ def menu(resquest):
     except Menu.DoesNotExist:
         dic = {"postre":"vacio", "entrante":"vacio", "carne":"vacio"}
     dic.update(csrf(resquest))
-    return render_to_response('index.html', dic)
+    return render_to_response('menu.html', dic)

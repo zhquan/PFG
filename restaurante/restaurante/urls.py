@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     url(r'^login$', 'django.contrib.auth.views.login'),
     url(r'^logout$', 'django.contrib.auth.views.logout',{'next_page': '/'}),
     url(r'^$', 'firstapp.views.home'),
-    url(r'^index.html$', 'firstapp.views.menu'),
+    url(r'^menu.html$', 'firstapp.views.menu'),
     url(r'static/(?P<path>.*)$', 'django.views.static.serve',{'document_root': 'static'}),
     url(r'^templates/(?P<path>.*)$', 'django.views.static.serve',{'document_root': 'templates'}),
 )

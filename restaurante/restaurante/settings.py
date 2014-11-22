@@ -28,6 +28,11 @@ TEMPLATE_DIRS = (
     'templates',
 )
 
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+)
+
 ALLOWED_HOSTS = []
 
 
