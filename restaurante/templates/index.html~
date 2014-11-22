@@ -4,15 +4,12 @@
     </head>
     <body>
         <div>
-            <h1>POSTRE</h1>
             {{postre|safe}}
         </div>
         <div>
-            <h1>ENTRANTE</h1>
             {{entrante|safe}}
         </div>
         <div>
-            <h1>CARNE</h1>
             {{carne|safe}}
         </div>
     </body>

@@ -12,7 +12,3 @@ Dos modos:
 
 2) Modo usuario:
     Sólo se puede comentar(con fecha), puntuar, reservar, pedir.
-
-
-python manage.py makemigrations firstapp
-python manage.py migration
