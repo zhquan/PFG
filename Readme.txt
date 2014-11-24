@@ -6,7 +6,7 @@ Un mapa para ver donde esta el restaurante y donde está el usuario para indicar
 Ranking de los platos más vendidos y de los platos mejor puntuados.
 
 Dos modos:
-1) Modo administrado:
+1) Modo administrador:
     Donde se puede crear, subir, modificar y borrar los platos.
     Indicar las mesas ocupadas.
 

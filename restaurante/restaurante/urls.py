@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'^logout$', 'django.contrib.auth.views.logout',{'next_page': '/'}),
     url(r'^$', 'firstapp.views.home'),
     url(r'^menu.html$', 'firstapp.views.menu'),
+    url(r'^index.html$', 'firstapp.views.index'),
     url(r'static/(?P<path>.*)$', 'django.views.static.serve',{'document_root': 'static'}),
     url(r'^templates/(?P<path>.*)$', 'django.views.static.serve',{'document_root': 'templates'}),
 )

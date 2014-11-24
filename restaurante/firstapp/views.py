@@ -7,24 +7,35 @@ from django.http import HttpResponse,HttpResponseNotFound, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 from models import Menu
 
-def home(resquest):
+def home(request):
 
     json_data = open('/home/quan/Proyecto/restaurante/static/menu.json')
     data1 = json.load(json_data)
     json_data.close()
     for a in data1[0]['postre']:
-        T_Menu = Menu(tipo = 'postre', plato = a)
-        T_Menu.save()
+        try:
+            T_Menu = Menu.objects.get(plato = a)
+        except Menu.DoesNotExist:
+            T_Menu = Menu(tipo = 'postre', plato = a)
+            T_Menu.save()
     for b in data1[0]['entrante']:
-        T_Menu = Menu(tipo = 'entrante', plato = b)
-        T_Menu.save()
+        try:
+            T_Menu = Menu.objects.get(plato = b)
+        except Menu.DoesNotExist:
+            T_Menu = Menu(tipo = 'entrante', plato = b)
+            T_Menu.save()
     for c in data1[0]['carne']: 
-        T_Menu = Menu(tipo = 'carne', plato = c)
-        T_Menu.save()
+        try:
+            T_Menu = Menu.objects.get(plato = c)
+        except Menu.DoesNotExist:
+            T_Menu = Menu(tipo = 'carne', plato = c)
+            T_Menu.save()
     
-    return HttpResponse("<a href=http://localhost:8800/index.html>lista menu</a>")
+    return HttpResponse("Save go to <a href=http://localhost:8800/index.html>GranChino.com</a>")
+def index(request):
+    return render_to_response('index.html')
 
-def menu(resquest):
+def menu(request):
     try:
         T_Postre = Menu.objects.filter(tipo = "postre")
         postre = []
@@ -49,5 +60,5 @@ def menu(resquest):
         dic = {"postre":postre, "entrante":entrante, "carne":carne}
     except Menu.DoesNotExist:
         dic = {"postre":"vacio", "entrante":"vacio", "carne":"vacio"}
-    dic.update(csrf(resquest))
+    dic.update(csrf(request))
     return render_to_response('menu.html', dic)
