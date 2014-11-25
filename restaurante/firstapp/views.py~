@@ -62,6 +62,3 @@ def menu(request):
         dic = {"postre":"vacio", "entrante":"vacio", "carne":"vacio"}
     dic.update(csrf(request))
     return render_to_response('menu.html', dic)
-
-def lugar(request):
-    return render_to_response('lugar.html')
