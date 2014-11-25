@@ -8,6 +8,21 @@ class Menu(models.Model):
     plato = models.TextField()
 #    precio = models.IntegerField()
 
-class Ejemplo(models.Model):
+class Foro(models.Model):
+    titulo = models.TextField()
+    user = models.TextField()
+    mensaje = models.TextField()
+
+class Usuarios(models.Model):
+    user = models.TextField()
+    correo = models.TextField()
+
+class Platos(models.Model):
     nombre = models.TextField()
-    algo = models.TextField()
+    precio = models.IntegerField()
+    tipo = models.TextField()
+
+class Bebidas(models.Model):
+    nombre = models.TextField()
+    precio = models.IntegerField()
+    tipo = models.TextField()

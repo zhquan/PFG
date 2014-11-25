@@ -5,7 +5,7 @@ from django.db import *
 import json
 from django.http import HttpResponse,HttpResponseNotFound, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
-from models import Menu
+from models import Menu, Foro, Usuarios, Platos, Bebidas
 
 def home(request):
 
@@ -65,3 +65,16 @@ def menu(request):
 
 def lugar(request):
     return render_to_response('lugar.html')
+
+def foro(request):
+#    try:
+#        T_Foro = Foro.objects.all()
+#        a = 0
+#        while a < len(T_Foro):
+#            titulos += T_Foro[a].titulo + "<br>"
+#            a = a+1
+#    except Foro.DoesExist:
+#        titulos = "No hay temas"
+#    dic = {"titulo":titulos}
+#    dic.update(csrf(request))
+    return render_to_response('foro.html')

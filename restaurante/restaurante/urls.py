@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^menu.html$', 'firstapp.views.menu'),
     url(r'^index.html$', 'firstapp.views.index'),
     url(r'^lugar.html$', 'firstapp.views.lugar'),
+    url(r'^foro.html$', 'firstapp.views.foro'),
     url(r'static/(?P<path>.*)$', 'django.views.static.serve',{'document_root': 'static'}),
     url(r'^templates/(?P<path>.*)$', 'django.views.static.serve',{'document_root': 'templates'}),
 )
