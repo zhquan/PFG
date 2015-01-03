@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    function showGranChinoPosition(){
+/*    function showGranChinoPosition(){
         var map = L.map('map').setView([40.2809449,-3.7978428], 16);
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -13,5 +13,15 @@ $(document).ready(function(){
             .bindPopup("Gran Chino")
             .openPopup();
     }
-    showGranChinoPosition();
+    showGranChinoPosition();*/
+    $("#menu").click(function() {
+        $("#menufuera").show();
+        $("#menu2").show();
+        
+    });
+    $("#close").click(function() {
+        $("#menu2").hide();
+        $("#menufuera").hide();
+    });
 });
+

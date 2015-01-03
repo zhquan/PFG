@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="../templates/css/style.css" type="text/css" media="screen">
     <link rel="stylesheet" href="../templates/css/layout.css" type="text/css" media="screen"> 
     <script src="../templates/js/jquery-1.7.1.min.js" type="text/javascript"></script>
-    <script src="../templatesjs/cufon-yui.js" type="text/javascript"></script>
+    <script src="../templates/js/cufon-yui.js" type="text/javascript"></script>
     <script src="../templates/js/cufon-replace.js" type="text/javascript"></script> 
     <script src="../templates/js/Dynalight_400.font.js" type="text/javascript"></script>
     <script src="../templates/js/FF-cash.js" type="text/javascript"></script>  
     <script src="../templates/js/jquery.equalheights.js" type="text/javascript"></script>    
-    <script src="../templates/js/jquery.bxSlider.js" type="text/javascript"></script> 
+    <script src="../templates/js/jquery.bxSlider.js" type="text/javascript"></script>
+    <script src="../templates/js/granchino.js" type="text/javascript"></script>
     <script type="text/javascript">
 		$(document).ready(function() {
 			$('#slider').bxSlider({
@@ -23,16 +24,6 @@
 			});
 		}); 
 	</script>
-	<!--[if lt IE 8]>
-    <div style=' clear: both; text-align:center; position: relative;'>
-        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-        	<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-        </a>
-    </div>
-	<![endif]-->
-    <!--[if lt IE 9]>
-   		<script type="text/javascript" src="js/html5.js"></script>
-	<![endif]-->
 </head>
 <body id="page2">
 	<!--==============================header=================================-->
@@ -46,9 +37,9 @@
                             <li><a href="index.html">Home</a></li>
                             <li><a class="active" href="menu.html">Menu</a></li>
                             <li><a href="catalogue.html">Catalogue </a></li>
-                            <li><a href="shipping.html">Shipping</a></li>
+                            <li><a href="lugar.html">Lugar</a></li>
                             <li><a href="faq.html">FAQ </a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="foro.html">Foro</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -57,7 +48,7 @@
         <div class="row-bot">
         	<div class="row-bot-bg">
             	<div class="main">
-                	<h2>Impressive Selection <span>for any Occasion</span></h2>
+                	<h2>Chinese food <span>for any Occasion</span></h2>
                 </div>
             </div>
         </div>
@@ -72,10 +63,14 @@
                         <div class="img-indent-bot">
                             <h3 class="prev-indent-bot">Special Offer</h3>
                             <div class="wrapper img-indent-bot">
-                                <figure class="img-indent"><img src="../images/page2-img1.jpg" alt=""></figure>
+                                <figure class="img-indent"><img src="../templates/images/page2-img1.jpg" alt=""></figure>
                                 <div class="extra-wrap">
-                                    <h5>Postre</h5>
+                                    <h3>Postre</h3>
                                     {{postre|safe}}
+                                    <h3>Entrante</h3>
+                                    {{entrante|safe}}
+                                    <h3>Carne</h3>
+                                    {{carne|safe}}
                                 </div>
                             </div>
                             <a class="button-1" href="#">Read More</a>
@@ -84,151 +79,151 @@
                             <div id="slider">
                             <div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img2.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img2.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img5.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img5.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
-                                <figure><a href="#"><img src="images/page2-img8.jpg" alt=""></a></figure>
+                                <figure><a href="#"><img src="../templates/images/page2-img8.jpg" alt=""></a></figure>
                                 <h5>Nam liber tempor</h5>
                                 (price $12.95)
                             </div>
                             <div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img3.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img3.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img6.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img6.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
-                                <figure><a href="#"><img src="images/page2-img9.jpg" alt=""></a></figure>
+                                <figure><a href="#"><img src="../templates/images/page2-img9.jpg" alt=""></a></figure>
                                 <h5>Nam liber tempor</h5>
                                 (price $12.95)
                             </div>
                             <div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img4.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img4.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img7.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img7.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
-                                <figure><a href="#"><img src="images/page2-img10.jpg" alt=""></a></figure>
+                                <figure><a href="#"><img src="../templates/images/page2-img10.jpg" alt=""></a></figure>
                                 <h5>Nam liber tempor</h5>
                                 (price $12.95)
                             </div>
                             <div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img2.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img2.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img5.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img5.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
-                                <figure><a href="#"><img src="images/page2-img8.jpg" alt=""></a></figure>
+                                <figure><a href="#"><img src="../templates/images/page2-img8.jpg" alt=""></a></figure>
                                 <h5>Nam liber tempor</h5>
                                 (price $12.95)
                             </div>
                             <div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img3.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img3.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img6.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img6.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
-                                <figure><a href="#"><img src="images/page2-img9.jpg" alt=""></a></figure>
+                                <figure><a href="#"><img src="../templates/images/page2-img9.jpg" alt=""></a></figure>
                                 <h5>Nam liber tempor</h5>
                                 (price $12.95)
                             </div>
                             <div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img4.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img4.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img7.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img7.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
-                                <figure><a href="#"><img src="images/page2-img10.jpg" alt=""></a></figure>
+                                <figure><a href="#"><img src="../templates/images/page2-img10.jpg" alt=""></a></figure>
                                 <h5>Nam liber tempor</h5>
                                 (price $12.95)
                             </div>
                             <div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img2.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img2.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img5.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img5.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
-                                <figure><a href="#"><img src="images/page2-img8.jpg" alt=""></a></figure>
+                                <figure><a href="#"><img src="../templates/images/page2-img8.jpg" alt=""></a></figure>
                                 <h5>Nam liber tempor</h5>
                                 (price $12.95)
                             </div>
                             <div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img3.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img3.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img6.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img6.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
-                                <figure><a href="#"><img src="images/page2-img9.jpg" alt=""></a></figure>
+                                <figure><a href="#"><img src="../templates/images/page2-img9.jpg" alt=""></a></figure>
                                 <h5>Nam liber tempor</h5>
                                 (price $12.95)
                             </div>
                             <div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img4.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img4.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img7.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img7.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
-                                <figure><a href="#"><img src="images/page2-img10.jpg" alt=""></a></figure>
+                                <figure><a href="#"><img src="../templates/images/page2-img10.jpg" alt=""></a></figure>
                                 <h5>Nam liber tempor</h5>
                                 (price $12.95)
                             </div>
                             <div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img4.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img4.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
                                 <div class="p2">
-                                	<figure><a href="#"><img src="images/page2-img7.jpg" alt=""></a></figure>
+                                	<figure><a href="#"><img src="../templates/images/page2-img7.jpg" alt=""></a></figure>
                                     <h5>Nam liber tempor</h5>
                                     (price $12.95)
                                 </div>
-                                <figure><a href="#"><img src="images/page2-img10.jpg" alt=""></a></figure>
+                                <figure><a href="#"><img src="../templates/images/page2-img10.jpg" alt=""></a></figure>
                                 <h5>Nam liber tempor</h5>
                                 (price $12.95)
                             </div>
@@ -275,8 +270,8 @@
     <footer>
         <div class="main">
         	<div class="aligncenter">
-            	<span>Catering.com &copy; 2012</span>
-                <a rel="nofollow" class="link" target="_blank" href="http://www.templatemonster.com/">Website Template</a> by TemplateMonster.com<br>Busque m&aacute;s plantillas web gratis <a href="http://www.mejoresplantillasgratis.es" target="_blank">en MPG.es</a>.
+            	<span>GranChino.com &copy; 2014</span>
+                <a rel="nofollow" class="link" target="_blank" href="http://www.github.com/zhquan/PFG/">Quan Zhou</a>
             </div>
         </div>
     </footer>

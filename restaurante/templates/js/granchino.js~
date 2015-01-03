@@ -9,9 +9,9 @@ $(document).ready(function(){
             fillColor: '#f03',
             fillOpacity: 0.6
         }).addTo(map);
-        L.marker([40.2809449,-3.7978428]).addTo(map)
-            .bindPopup("Gran Chino")
-            .openPopup();
+//        L.marker([40.2809449,-3.7978428]).addTo(map)
+//            .bindPopup("Gran Chino")
+//            .openPopup();
     }
     showGranChinoPosition();
 });

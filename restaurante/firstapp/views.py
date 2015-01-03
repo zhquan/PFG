@@ -8,7 +8,6 @@ from django.contrib.auth import authenticate, login
 from models import Menu, Foro, Usuarios, Platos, Bebidas
 
 def home(request):
-
     json_data = open('/home/quan/Proyecto/restaurante/static/menu.json')
     data1 = json.load(json_data)
     json_data.close()
@@ -31,11 +30,12 @@ def home(request):
             T_Menu = Menu(tipo = 'carne', plato = c)
             T_Menu.save()
     
-    return HttpResponse("Save go to <a href=http://localhost:8800/index.html>GranChino.com</a>")
-def index(request):
+#    return HttpResponse("Save go to <a href=http://localhost:8800/index.html>GranChino.com</a>")
+#def index(request):
     return render_to_response('index.html')
 
-def menu(request):
+#def menu(request):
+def index(request):
     try:
         T_Postre = Menu.objects.filter(tipo = "postre")
         postre = []
@@ -61,12 +61,13 @@ def menu(request):
     except Menu.DoesNotExist:
         dic = {"postre":"vacio", "entrante":"vacio", "carne":"vacio"}
     dic.update(csrf(request))
-    return render_to_response('menu.html', dic)
+    return render_to_response('bootstrap/index.html', dic)
 
-def lugar(request):
-    return render_to_response('lugar.html')
+#def lugar(request):
+#    return render_to_response('lugar.html')
 
-def foro(request):
+#def foro(request):
+#disqus para crearte diractamente un 
 #    try:
 #        T_Foro = Foro.objects.all()
 #        a = 0
@@ -77,4 +78,4 @@ def foro(request):
 #        titulos = "No hay temas"
 #    dic = {"titulo":titulos}
 #    dic.update(csrf(request))
-    return render_to_response('foro.html')
+#    return render_to_response('foro.html')
