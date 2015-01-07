@@ -35,7 +35,11 @@ def home(request):
     return render_to_response('index.html')
 
 #def menu(request):
+@csrf_exempt
 def index(request):
+#    if request.method == 'POST':
+            
+#    else:
     try:
         T_Postre = Menu.objects.filter(tipo = "postre")
         postre = []

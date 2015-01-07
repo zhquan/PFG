@@ -9,11 +9,13 @@
 
     <title>Gran Chino App</title>
     <script src="../templates/js/jquery.min.js"></script>
+    <script src="../templates/js/leaflet.js"></script>
     <script src="../templates/bootstrap/js/bootstrap.min.js"></script>
     <!-- <script src="../templates/bootstrap/js/docs.min.js"></script> -->
     <script src="../templates/bootstrap/js/granchino.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="../templates/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../templates/css/leaflet.css" rel="stylesheet">
     <link href="../templates/bootstrap/css/granChino.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -32,13 +34,65 @@
 ================================================== -->
   <body>
     <div id="menu">MENU</div>
-    <div id="menufuera" style="display: none;"></div>
+    <div id="mapa">MAPA</div>
+    <div id="html">HTML</div>
+    <div id="foro">FORO</div>
+    <div id="fondo" style="display: none;"></div>
     <div id="menu2" style="display: none;">MENU
-        {{postre|safe}}
-        {{entrante|safe}}
-        {{carne|safe}}
+        <br>
+        <button id="add">Add a new plate</button>
+        <div class="plato">
+            {{postre|safe}}
+            id nombre foto<br>
+            description<br>
+            price<br>
+            <button id="edit">Edit</button>
+        </div>
+        <div class="plato">
+            {{entrante|safe}}
+            id nombre foto<br>
+            description<br>
+            price<br>
+            <button id="edit">Edit</button>
+        </div>
+        <div class="plato">
+            {{carne|safe}}
+            id nombre foto<br>
+            description<br>
+            price<br>
+            <button id="edit">Edit</button>
+        </div>
         <br>
         <button id="close">Close</button>
+    </div>
+    <div id="mapa2" style="display: none;">Como llegar<br>
+        <button id="closeMap">Close</button><br>
+        <div id="datos">Dir: Calle Covadonga, 7 Fuenlabrada(Madrid)<br>
+            Tel: +34 91 000 00 00<br>
+            E-mail: granchino10@gmail.com<br>        
+        </div>
+        <div id="map"></div>
+    </div>
+    <div id="addPlate" style="display: none;">
+        <h4>New Plate</h4>
+        <br>
+<!--        <form method="POST" action=""> -->
+            <label for="nombre">ID </label>
+            <input type="text" id="id" title="Insert the plate number" size="3">
+            <label for="nombre">Name </label>
+            <input type="text" id="name" title="Insert the plate name">
+            <br>
+            <label for="nombre">Description </label>
+            <input type="text" id="description" value="null" title="Insert the plate description">
+            <br>
+            <label for="nombre">Image </label>
+            <input type="text" id="image" value="null" title="Insert the plate url image">
+            <label for="nombre">Price </label>
+            <input type="text" id="price" title="€" size="5">
+            <br>
+            <button id="acept">Add</button>
+            <button id="cancel">Cancel</button>
+<!--        </form> -->
     </div>
   </body>
 </html>
