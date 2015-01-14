@@ -22,7 +22,6 @@ class Platos(models.Model):
     nombre = models.TextField()
     precio = models.IntegerField()
     tipo = models.TextField()
-    image = models.TextField()
 
 class Bebidas(models.Model):
     n = models.IntegerField()

@@ -9,8 +9,28 @@ $(document).ready(function(){
         $("#mapa2").show();
         showGranChinoPosition();
     });
+    $("#foro").click(function() {
+        $("#fondo").show();
+        $("#foro2").show();
+    });
+    $("#mesas").click(function() {
+        $("#fondo").show();
+        $("#mesas2").show();
+    });
     $("#close").click(function() {
         $("#menu2").hide();
+        $("#fondo").hide();
+    });
+    $("#closeMap").click(function() {
+        $("#mapa2").hide();
+        $("#fondo").hide();
+    });
+    $("#closeForo").click(function() {
+        $("#foro2").hide();
+        $("#fondo").hide();
+    });
+    $("#closeMesas").click(function() {
+        $("#mesas2").hide();
         $("#fondo").hide();
     });
     $("#add").click(function() {
@@ -28,6 +48,19 @@ $(document).ready(function(){
     });
     $("#cancel").click(function() {
         $("#addPlate").hide();
+    });
+    $("#addMesas").click(function() {
+        $("#addMesa").show();
+    });
+    $("#closeMesa").click(function() {
+        $("#addMesa").hide();
+    });
+    $("#aceptMesa").click(function() {
+        var id = document.getElementById("mesa").value;
+        var name = document.getElementById("N").value;
+        $("#addMesa").hide();
+        console.log(id+" "+name);
+        saveMesa(id, name, tiempo);
     });
 });
 function showGranChinoPosition(){

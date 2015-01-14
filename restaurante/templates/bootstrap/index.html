@@ -35,44 +35,21 @@
   <body>
     <div id="menu">MENU</div>
     <div id="mapa">MAPA</div>
-    <div id="html">HTML</div>
+    <div id="web">WEB</div>
     <div id="foro">FORO</div>
+    <div id="ranking">RANKING</div>
+    <div id="mesas">MESAS</div>
     <div id="fondo" style="display: none;"></div>
     <div id="menu2" style="display: none;">MENU
         <br>
         <button id="add">Add a new plate</button>
         <div class="plato">
-            {{postre|safe}}
-            id nombre foto<br>
-            description<br>
-            price<br>
-            <button id="edit">Edit</button>
-        </div>
-        <div class="plato">
-            {{entrante|safe}}
-            id nombre foto<br>
-            description<br>
-            price<br>
-            <button id="edit">Edit</button>
-        </div>
-        <div class="plato">
-            {{carne|safe}}
-            id nombre foto<br>
-            description<br>
-            price<br>
-            <button id="edit">Edit</button>
+            {{platos|safe}}
         </div>
         <br>
         <button id="close">Close</button>
     </div>
-    <div id="mapa2" style="display: none;">Como llegar<br>
-        <button id="closeMap">Close</button><br>
-        <div id="datos">Dir: Calle Covadonga, 7 Fuenlabrada(Madrid)<br>
-            Tel: +34 91 000 00 00<br>
-            E-mail: granchino10@gmail.com<br>        
-        </div>
-        <div id="map"></div>
-    </div>
+    
     <div id="addPlate" style="display: none;">
         <h4>New Plate</h4>
         <br>
@@ -81,6 +58,9 @@
             <input type="text" id="id" title="Insert the plate number" size="3">
             <label for="nombre">Name </label>
             <input type="text" id="name" title="Insert the plate name">
+            <br>
+            <label for="type">Type </label>
+            <input type="text" id="type" title="Insert the plate type">
             <br>
             <label for="nombre">Description </label>
             <input type="text" id="description" value="null" title="Insert the plate description">
@@ -93,6 +73,67 @@
             <button id="acept">Add</button>
             <button id="cancel">Cancel</button>
 <!--        </form> -->
+    </div>
+
+    <div id="mapa2" style="display: none;">Como llegar<br>
+        <br>
+        <div id="datos">Dir: Calle Covadonga, 7 Fuenlabrada(Madrid)<br>
+            Tel: +34 91 000 00 00<br>
+            E-mail: granchino10@gmail.com<br>        
+        </div>
+        <div id="map"></div>
+        <button id="closeMap">Close</button>
+    </div>
+
+    <div id="foro2" style="display: none;">
+        Foro<br>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'granchino'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+        <button id="closeForo">Close</button>
+    </div>
+    <div id="mesas2" style="display: none;">
+        <button id="addMesas">Add</button><br>
+        <div id="addMesa" style="display: none;">
+            <label for="nombre">Table Number </label>
+            <input type="text" id="mesa" value="" title="Insert the table number">
+            <label for="nombre">Number of Customers </label>
+            <input type="text" id="N" value="" title="Insert the number of customers"><br>
+            <button id="aceptMesa">Add</button>
+            <button id="cancelMesa">Cancel</button>
+        </div>
+        <div class="guerra">
+            <div id="mesa1" class="mesa">MESA 1<br>Personas: <br>Tiempo: </div>
+            <div id="mesa2" class="mesa">MESA 2<br>Personas: <br>Tiempo: </div>
+            <div id="mesa3" class="mesa">MESA 3<br>Personas: <br>Tiempo: </div>
+            <div id="mesa4" class="mesa">MESA 4<br>Personas: <br>Tiempo: </div>
+            <div id="mesa5" class="mesa">MESA 5<br>Personas: <br>Tiempo: </div>
+            <div id="mesa6" class="mesa">MESA 6<br>Personas: <br>Tiempo: </div>
+            <div id="mesa7" class="mesa">MESA 7<br>Personas: <br>Tiempo: </div>
+            <div id="mesa8" class="mesa">MESA 8<br>Personas: <br>Tiempo: </div>
+            <div id="mesa9" class="mesa">MESA 9<br>Personas: <br>Tiempo: </div>
+            <div id="mesa10" class="mesa">MESA 10<br>Personas: <br>Tiempo: </div>
+            <div id="mesa11" class="mesa">MESA 11<br>Personas: <br>Tiempo: </div>
+            <div id="mesa12" class="mesa">MESA 12<br>Personas: <br>Tiempo: </div>
+            <div id="mesa13" class="mesa">MESA 13<br>Personas: <br>Tiempo: </div>
+            <div id="mesa14" class="mesa">MESA 14<br>Personas: <br>Tiempo: </div>
+            <div id="mesa15" class="mesa">MESA 15<br>Personas: <br>Tiempo: </div>
+            <div id="mesa16" class="mesa">MESA 16<br>Personas: <br>Tiempo: </div>
+            <div id="mesa17" class="mesa">MESA 17<br>Personas: <br>Tiempo: </div>
+        </div>
+        <br>
+        <button id="closeMesas">Close</button>
     </div>
   </body>
 </html>

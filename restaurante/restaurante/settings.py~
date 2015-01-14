@@ -32,6 +32,7 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 )
+
 ALLOWED_HOSTS = []
 
 
@@ -46,7 +47,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
 #    'django.contrib.sites',
-    'firstapp',
+    'first',
 )
 
 MIDDLEWARE_CLASSES = (

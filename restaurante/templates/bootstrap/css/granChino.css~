@@ -1,14 +1,33 @@
-#menu, #mapa, #html {
+body {
+    padding: 10%;
+    background-image: url(../foto/salon.jpg);
+}
+#menu, #mapa, #web, #foro, #mesas, #ranking {
     position: relative;
     border: solid;
-    font-size: 50px;
     border-radius: 100px;
     background-color: #777;
     width: 200px;
     height: 200px;
-    padding: 60px 25px;
     float: left;
-    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+#menu, #mapa, #foro {
+    font-size: 50px;
+    padding: 60px 25px;
+}
+#web {
+    font-size: 50px;
+    padding: 60px 34px;
+}
+#mesas {
+    font-size: 48px;
+    padding: 60px 15px;
+}
+#ranking {
+    font-size: 35px;
+    padding: 70px 17px;
 }
 #menu:hover {
     background-color: #428BCA;
@@ -16,7 +35,16 @@
 #mapa:hover {
     background-color: #428BCA;
 }
-#html:hover {
+#web:hover {
+    background-color: #428BCA;
+}
+#foro:hover {
+    background-color: #428BCA;
+}
+#mesas:hover {
+    background-color: #428BCA;
+}
+#ranking:hover {
     background-color: #428BCA;
 }
 #mapa2 {font-size: 20px;}
@@ -31,7 +59,7 @@
     opacity: .5;
 }
 
-#menu2, #mapa2 {
+#menu2, #mapa2, #foro2, #mesas2 {
     padding: 10px; 
     background-color: silver;
     top: 10%;
@@ -64,7 +92,7 @@
     background-color: #999;
 }
 
-#addPlate {
+#addPlate, #addMesa {
     background-color: white;
     position: absolute;
     border: solid;
@@ -72,4 +100,29 @@
     padding: 10px;
     top: 30%;
     left: 30%;
+}
+.guerra {
+    background-color: yellow;
+    border: solid;
+    border-radius: 5px;
+    height: 1130px;
+}
+.mesa {
+    border: solid;
+    background-color: silver;;
+    float: left;
+    width: 120px;
+    height: 160px;
+    margin: 60px 40px;
+}
+#tema {
+    float: left;
+    border: solid;
+    border-radius: 10px;
+    width: 16%;
+}
+#foroActual {
+    border: solid;
+    border-radius: 10px;
+    margin-left: 20%;
 }
