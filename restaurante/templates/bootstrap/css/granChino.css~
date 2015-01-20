@@ -102,18 +102,21 @@ body {
     left: 30%;
 }
 .guerra {
-    background-color: yellow;
+    background-color: black;
     border: solid;
     border-radius: 5px;
-    height: 1130px;
+    height: 500px;
 }
 .mesa {
     border: solid;
-    background-color: silver;;
+    background-color: silver;
     float: left;
     width: 120px;
-    height: 160px;
-    margin: 60px 40px;
+    height: 80px;
+    margin: 20px 40px;
+}
+.mesa:hover {
+    background-color: white;
 }
 #tema {
     float: left;

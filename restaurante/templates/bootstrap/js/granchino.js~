@@ -49,10 +49,7 @@ $(document).ready(function(){
     $("#cancel").click(function() {
         $("#addPlate").hide();
     });
-    $("#addMesas").click(function() {
-        $("#addMesa").show();
-    });
-    $("#closeMesa").click(function() {
+    $("#cancelMesa").click(function() {
         $("#addMesa").hide();
     });
     $("#aceptMesa").click(function() {
@@ -62,9 +59,63 @@ $(document).ready(function(){
         console.log(id+" "+name);
         saveMesa(id, name, tiempo);
     });
+    $("#mesa1").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa2").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa3").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa4").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa5").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa6").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa7").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa8").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa9").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa10").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa11").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa12").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa13").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa14").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa15").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa16").click(function() {
+        $("#addMesa").show();
+    });
+    $("#mesa17").click(function() {
+        $("#addMesa").show();
+    });
 });
 function showGranChinoPosition(){
-    var map = L.map('map').setView([40.2809449,-3.7978428], 16);
+    var map = L.map('map', {
+        layers: MQ.mapLayer(),
+        center: [40.2809449,-3.7978428], 
+    });
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
@@ -76,8 +127,40 @@ function showGranChinoPosition(){
     L.marker([40.2809449,-3.7978428]).addTo(map)
         .bindPopup("Gran Chino")
         .openPopup();
+    dir = MQ.routing.directions()
+        .on('success', function(data) {
+            var legs = data.route.legs,
+                html = '',
+                maneuvers,
+                i;
+
+            if (legs && legs.length) {
+                maneuvers = legs[0].maneuvers;
+
+                for (i=0; i<maneuvers.length; i++) {
+                    html += (i+1) + '. ';
+                    html += maneuvers[i].narrative + '<br />';
+                }
+
+                L.DomUtil.get('datos').innerHTML += html;
+            }
+        });
+ 
+    dir.route({
+        locations: [
+          'lima 7, Fuenlabrada',
+          'covadonga 7, Fuenlabrada'
+        ]
+    });
+
+    map.addLayer(MQ.routing.routeLayer({
+      directions: dir,
+      fitBounds: true
+    }));
 }
 function savePlate(id, name, description, image, price) {
     
 }
+function saveMesa(id, numero, precio) {
 
+}

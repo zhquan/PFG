@@ -9,10 +9,14 @@
 
     <title>Gran Chino App</title>
     <script src="../templates/js/jquery.min.js"></script>
-    <script src="../templates/js/leaflet.js"></script>
+    <!-- <script src="../templates/js/leaflet.js"></script> -->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <script src="../templates/bootstrap/js/bootstrap.min.js"></script>
     <!-- <script src="../templates/bootstrap/js/docs.min.js"></script> -->
     <script src="../templates/bootstrap/js/granchino.js"></script>
+
+    <script src="http://www.mapquestapi.com/sdk/leaflet/v1.s/mq-map.js?key=Fmjtd%7Cluu82907n0%2C70%3Do5-947nhr"></script>
+    <script src="http://www.mapquestapi.com/sdk/leaflet/v1.s/mq-routing.js?key=Fmjtd%7Cluu82907n0%2C70%3Do5-947nhr"></script>
     <!-- Bootstrap core CSS -->
     <link href="../templates/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../templates/css/leaflet.css" rel="stylesheet">
@@ -40,13 +44,20 @@
     <div id="ranking">RANKING</div>
     <div id="mesas">MESAS</div>
     <div id="fondo" style="display: none;"></div>
-    <div id="menu2" style="display: none;">MENU
+    <div id="menu2" style="display: none;">
+        <h2 align=center>MENU</h2>
         <br>
         <button id="add">Add a new plate</button>
         <div class="plato">
-            {{platos|safe}}
+            1. Ensalada 
+            {{platos|safe}}<br>
+            <button id="edit">Edit</button>
         </div>
         <br>
+        <div class="plato">
+            2. Arroz<br>
+            <button id="edit">Edit</button>
+        </div>
         <button id="close">Close</button>
     </div>
     
@@ -75,18 +86,19 @@
 <!--        </form> -->
     </div>
 
-    <div id="mapa2" style="display: none;">Como llegar<br>
-        <br>
-        <div id="datos">Dir: Calle Covadonga, 7 Fuenlabrada(Madrid)<br>
-            Tel: +34 91 000 00 00<br>
-            E-mail: granchino10@gmail.com<br>        
+    <div id="mapa2" style="display: none;">
+        <h2 align=center>Como llegar</h2><br>
+        <button id="closeMap" align=bottom>Close</button>
+        <div id="datos"><hr>
+            Dirección: Calle Covadonga, 7 Fuenlabrada(Madrid)<hr>
+            Teléfono: 91 606 76 89 / 91 609 79 94<hr>
+            E-mail: granchino10@gmail.com<hr>        
         </div>
         <div id="map"></div>
-        <button id="closeMap">Close</button>
     </div>
 
     <div id="foro2" style="display: none;">
-        Foro<br>
+        <h2 align=center>Foro</h2><br>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -104,7 +116,6 @@
         <button id="closeForo">Close</button>
     </div>
     <div id="mesas2" style="display: none;">
-        <button id="addMesas">Add</button><br>
         <div id="addMesa" style="display: none;">
             <label for="nombre">Table Number </label>
             <input type="text" id="mesa" value="" title="Insert the table number">
@@ -114,23 +125,23 @@
             <button id="cancelMesa">Cancel</button>
         </div>
         <div class="guerra">
-            <div id="mesa1" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa2" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa3" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa4" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa5" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa6" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa7" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa8" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa9" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa10" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa11" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa12" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa13" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa14" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa15" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa16" class="mesa">Personas: <br>Tiempo: </div>
-            <div id="mesa17" class="mesa">Personas: <br>Tiempo: </div>
+            <div id="mesa1" class="mesa">MESA 1<br>Personas: <br>Tiempo: </div>
+            <div id="mesa2" class="mesa">MESA 2<br>Personas: <br>Tiempo: </div>
+            <div id="mesa3" class="mesa">MESA 3<br>Personas: <br>Tiempo: </div>
+            <div id="mesa4" class="mesa">MESA 4<br>Personas: <br>Tiempo: </div>
+            <div id="mesa5" class="mesa">MESA 5<br>Personas: <br>Tiempo: </div>
+            <div id="mesa6" class="mesa">MESA 6<br>Personas: <br>Tiempo: </div>
+            <div id="mesa7" class="mesa">MESA 7<br>Personas: <br>Tiempo: </div>
+            <div id="mesa8" class="mesa">MESA 8<br>Personas: <br>Tiempo: </div>
+            <div id="mesa9" class="mesa">MESA 9<br>Personas: <br>Tiempo: </div>
+            <div id="mesa10" class="mesa">MESA 10<br>Personas: <br>Tiempo: </div>
+            <div id="mesa11" class="mesa">MESA 11<br>Personas: <br>Tiempo: </div>
+            <div id="mesa12" class="mesa">MESA 12<br>Personas: <br>Tiempo: </div>
+            <div id="mesa13" class="mesa">MESA 13<br>Personas: <br>Tiempo: </div>
+            <div id="mesa14" class="mesa">MESA 14<br>Personas: <br>Tiempo: </div>
+            <div id="mesa15" class="mesa">MESA 15<br>Personas: <br>Tiempo: </div>
+            <div id="mesa16" class="mesa">MESA 16<br>Personas: <br>Tiempo: </div>
+            <div id="mesa17" class="mesa">MESA 17<br>Personas: <br>Tiempo: </div>
         </div>
         <br>
         <button id="closeMesas">Close</button>
